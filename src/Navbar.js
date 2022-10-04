@@ -2,6 +2,7 @@ import React from "react";
 import { FaHome, FaSearch, FaShoppingCart } from "react-icons/fa";
 import { BsPerson } from "react-icons/bs";
 import { useGlobalcontext } from "./context";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const { amount } = useGlobalcontext();
@@ -9,10 +10,12 @@ const Navbar = () => {
     <section className="navbar-container">
       <div className="navbar">
         <button className="nav-btn">
-          <div>
-            <FaHome />
-          </div>
-          Home
+          <Link to="/">
+            <div>
+              <FaHome />
+            </div>
+            Home
+          </Link>
         </button>
         <button className="nav-btn">
           <div>
@@ -21,11 +24,13 @@ const Navbar = () => {
           Search
         </button>
         <button className="nav-btn">
-          <div>
-            <FaShoppingCart />
-          </div>
-          Cart
-          <span>{amount}</span>
+          <Link to="/cart">
+            <div>
+              <FaShoppingCart />
+            </div>
+            Cart
+            <span>{amount}</span>
+          </Link>
         </button>
         <button className="nav-btn">
           <div>

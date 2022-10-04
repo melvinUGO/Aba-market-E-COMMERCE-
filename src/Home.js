@@ -1,7 +1,7 @@
 import React, { useRef } from "react";
 import { FaSearch, FaBars } from "react-icons/fa";
 import { useGlobalcontext } from "./context";
-import CartContainer from "./CartContainer";
+import ProductsContainer from "./ProductsContainer";
 
 const Home = () => {
   const { filterBtns, handleFilter } = useGlobalcontext();
@@ -31,7 +31,7 @@ const Home = () => {
         })}
       </div>
       {/* cart container*/}
-      <CartContainer />
+      <ProductsContainer />
     </>
   );
 };
