@@ -5,10 +5,10 @@ import {
   Switch,
   BrowserRouter,
 } from "react-router-dom";
-import LandingPage from "./LandingPage";
-import { Cart } from "./Cart";
-import Error from "./Error";
-import Navbar from "./Navbar";
+import LandingPage from "./pages/LandingPage";
+import { Cart } from "./pages/Cart";
+import Error from "./components/Error";
+import Navbar from "./components/Navbar";
 function App() {
   return (
     <BrowserRouter>

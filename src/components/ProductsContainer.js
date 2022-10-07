@@ -1,15 +1,15 @@
 import React from "react";
-import { useGlobalcontext } from "./context";
+import { useGlobalcontext } from "../context";
 import { FaGreaterThan, FaLessThan } from "react-icons/fa";
 
 const CartContainer = () => {
   const { cart, addToCart } = useGlobalcontext();
   return (
-    <section className="cart-container">
+    <section className="products-container">
       {cart.map((item) => {
         const { title, id, price, img, amount, category } = item;
         return (
-          <section className="cart-item" key={id}>
+          <section className="products-item" key={id}>
             <div className="info">
               <h4>{title}</h4>
               <p>{category}</p>

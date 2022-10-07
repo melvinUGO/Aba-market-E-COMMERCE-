@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { FaSearch, FaBars } from "react-icons/fa";
-import { useGlobalcontext } from "./context";
+import { useGlobalcontext } from "../context";
 import ProductsContainer from "./ProductsContainer";
 
 const Home = () => {
