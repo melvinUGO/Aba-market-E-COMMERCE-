@@ -96,6 +96,10 @@ p {
   }
 }
 
+.btn {
+  color: black;
+}
+
 /**** navbar */
 
 .navbar-container {
@@ -192,13 +196,15 @@ header h3 {
 .products-item {
   display: flex;
   justify-content: space-between;
-  width: 85%;
+  align-items: center;
+  width: 95%;
   height: 230px;
   margin: 20px auto;
   padding: 15px;
   box-shadow: 0px 20px 25px rgb(0 0 0 / 0.1), 0px -1px 20px rgb(0 0 0 / 0.1);
   border-radius: 30px;
   background-color: white;
+  overflow: hidden;
 }
 
 .products-item:nth-last-child(1) {
@@ -206,7 +212,8 @@ header h3 {
 }
 
 .img-container {
-  width: 50%;
+  width: 35%;
+  height: 100%;
   padding-top: 20px;
 }
 
@@ -245,6 +252,45 @@ header h3 {
   font-weight: bold;
 }
 
+/* cart page styles */
+.cart-section {
+  padding: 10px 20px;
+}
+
+.cart-title {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+}
+
+.cart-container h3 {
+  text-align: center;
+  text-transform: uppercase;
+  padding: 40px 0;
+}
+
+.remove-btn {
+  border: none;
+  background-color: transparent;
+  letter-spacing: 3px;
+  color: var(--clr-primary);
+}
+
+.amount-btn {
+  border: none;
+  color: var(--clr-primary);
+  background-color: transparent;
+}
+
+.cart-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 4px solid var(--clr-primary);
+  margin-bottom: 60px;
+}
+
 /* media queries */
 @media screen and (max-width: 300px) {
   .navbar {
@@ -266,6 +312,14 @@ header h3 {
 
   .add-btn {
     padding: 7px;
+  }
+
+  .cart-section {
+    padding: 5px;
+  }
+
+  .products-item {
+    width: 90%;
   }
 }
 
@@ -294,6 +348,7 @@ header h3 {
 
   .products-item {
     height: 300px;
+    width: 80%;
   }
 
   .products-item:nth-last-child(1) {
@@ -301,15 +356,15 @@ header h3 {
   }
 
   .info h4 {
-    font-size: 2.1rem;
+    font-size: 1.3rem;
   }
 
   .info p {
-    font-size: 2rem;
+    font-size: 1.3rem;
   }
 
   .price-container .price {
-    font-size: 2rem;
+    font-size: 1.5rem;
     padding-top: 15px;
   }
 
@@ -357,5 +412,19 @@ header h3 {
 
   .products-item:nth-last-child(1) {
     margin-bottom: 0;
+  }
+
+  .cart-section {
+    margin-left: 80px;
+    max-width: 3000px;
+  }
+
+  .cart-title {
+    padding-right: 550px;
+  }
+
+  .cart-item {
+    width: 60%;
+    padding-right: 100px;
   }
 }

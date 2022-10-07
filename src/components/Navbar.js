@@ -10,7 +10,7 @@ const Navbar = () => {
     <section className="navbar-container">
       <div className="navbar">
         <button className="nav-btn">
-          <Link to="/">
+          <Link to="/" className="btn">
             <div>
               <FaHome />
             </div>
@@ -24,7 +24,7 @@ const Navbar = () => {
           Search
         </button>
         <button className="nav-btn">
-          <Link to="/cart">
+          <Link to="/cart" className="btn">
             <div>
               <FaShoppingCart />
             </div>

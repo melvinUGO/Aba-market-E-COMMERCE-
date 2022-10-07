@@ -2,8 +2,8 @@ import React from "react";
 import { useGlobalcontext } from "../context";
 import { FaGreaterThan, FaLessThan } from "react-icons/fa";
 
-const CartContainer = () => {
-  const { cart, addToCart } = useGlobalcontext();
+const ProductsContainer = () => {
+  const { cart, increase } = useGlobalcontext();
   return (
     <section className="products-container">
       {cart.map((item) => {
@@ -14,8 +14,8 @@ const CartContainer = () => {
               <h4>{title}</h4>
               <p>{category}</p>
               <div className="price-container">
-                <p className="price">{`₦ ${price}`}</p>
-                <button className="add-btn" onClick={() => addToCart(id)}>
+                <p className="price">₦{price}</p>
+                <button className="add-btn" onClick={() => increase(id)}>
                   +
                 </button>
               </div>
@@ -30,4 +30,4 @@ const CartContainer = () => {
   );
 };
 
-export default CartContainer;
+export default ProductsContainer;

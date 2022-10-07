@@ -1,4 +1,4 @@
-import React, { useContext, useReducer } from "react";
+import React, { useContext, useEffect, useReducer } from "react";
 import { data } from "./data";
 import reducer from "./reducer";
 
@@ -17,14 +17,30 @@ const AppProvider = ({ children }) => {
     dispatch({ type: "FILTER", payload: category });
   };
 
-  const addToCart = (id) => {
-    dispatch({ type: "ADD_TO_CART", payload: id });
+  const increase = (id) => {
+    dispatch({ type: "INCREASE", payload: id });
     console.log(state);
   };
 
+  const decrease = (id) => {
+    dispatch({ type: "DECREASE", payload: id });
+  };
+
+  const remove = (id) => {
+    dispatch({ type: "REMOVE", payload: id });
+  };
+
+  const handleTotal = () => {
+    dispatch({ type: "TOTAL" });
+  };
+
+  useEffect(() => {
+    handleTotal();
+  }, [state.amount]);
+
   return (
     <AppContext.Provider
-      value={{ ...state, handleFilter, filterBtns, addToCart }}
+      value={{ ...state, handleFilter, filterBtns, increase, decrease, remove }}
     >
       {children}
     </AppContext.Provider>
