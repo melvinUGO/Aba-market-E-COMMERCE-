@@ -20,7 +20,7 @@ export const Cart = () => {
         <CartContainer />
         <div className="cart-total">
           <h3>total</h3>
-          <h3>{total}</h3>
+          <h3>₦{total}</h3>
         </div>
       </div>
     </section>
