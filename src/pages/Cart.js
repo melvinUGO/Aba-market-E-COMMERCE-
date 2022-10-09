@@ -16,7 +16,7 @@ export const Cart = () => {
         <h3>Aba Market</h3>
       </div>
       <div className="cart-container">
-        <h3>your bag</h3>
+        <h3>your cart</h3>
         <CartContainer />
         <div className="cart-total">
           <h3>total</h3>
