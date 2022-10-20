@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useReducer } from "react";
+import React, { useContext, useEffect, useReducer, useState } from "react";
 import { data } from "./data";
 import reducer from "./reducer";
 
@@ -12,6 +12,7 @@ const currentState = {
 const AppProvider = ({ children }) => {
   const filterBtns = ["All", ...new Set(data.map((item) => item.category))];
   const [state, dispatch] = useReducer(reducer, currentState);
+  const [user, setUser] = useState("");
 
   const handleFilter = (category) => {
     dispatch({ type: "FILTER", payload: category });
@@ -40,7 +41,16 @@ const AppProvider = ({ children }) => {
 
   return (
     <AppContext.Provider
-      value={{ ...state, handleFilter, filterBtns, increase, decrease, remove }}
+      value={{
+        ...state,
+        handleFilter,
+        filterBtns,
+        increase,
+        decrease,
+        remove,
+        user,
+        setUser,
+      }}
     >
       {children}
     </AppContext.Provider>

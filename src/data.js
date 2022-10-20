@@ -49,7 +49,7 @@ export const data = [
   },
   {
     id: 7,
-    title: "Business Shoes",
+    title: "Corporate Shoes",
     price: 25000,
     img: "https://media.istockphoto.com/photos/elegant-black-leather-shoes-picture-id172417586?k=20&m=172417586&s=612x612&w=0&h=DDjvQhRgSYcH2F5rVt8iohGvkqCIteYuTCq3wpJuUi4=",
     amount: 0,

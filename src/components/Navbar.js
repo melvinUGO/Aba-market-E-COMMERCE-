@@ -1,6 +1,6 @@
 import React from "react";
 import { FaHome, FaSearch, FaShoppingCart } from "react-icons/fa";
-import { BsPerson } from "react-icons/bs";
+import { BsFillPersonFill } from "react-icons/bs";
 import { useGlobalcontext } from "../context";
 import { Link } from "react-router-dom";
 
@@ -33,10 +33,12 @@ const Navbar = () => {
           </Link>
         </button>
         <button className="nav-btn">
-          <div>
-            <BsPerson />
-          </div>
-          Me
+          <Link to="/Dashboard" className="btn">
+            <div>
+              <BsFillPersonFill />
+            </div>
+            Me
+          </Link>
         </button>
       </div>
     </section>
