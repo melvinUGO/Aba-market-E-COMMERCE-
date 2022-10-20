@@ -320,6 +320,7 @@ header h3 {
   padding: 10px;
   margin: 10px 0;
   border: none;
+  cursor: pointer;
 }
 
 .signup-btn {
@@ -329,6 +330,7 @@ header h3 {
   border: 1px solid var(--clr-primary);
   text-align: center;
   padding: 10px;
+  cursor: pointer;
 }
 
 .form input {
