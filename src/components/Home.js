@@ -1,5 +1,6 @@
 import React, { useRef } from "react";
 import { FaSearch, FaBars } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import { useGlobalcontext } from "../context";
 import ProductsContainer from "./ProductsContainer";
 
@@ -8,13 +9,12 @@ const Home = () => {
   const container = useRef(null);
 
   return (
-    <>
+    <section className="home">
       <header>
-        <button className="bars">
-          <FaBars />
-        </button>
         <h3>Aba Market</h3>
-        <FaSearch />
+        <Link to="/me" className="header-btn">
+          Sign in/Sign Up
+        </Link>
       </header>
       {/* filter buttons */}
       <div className="filter-container">
@@ -32,7 +32,7 @@ const Home = () => {
       </div>
       {/* cart container*/}
       <ProductsContainer />
-    </>
+    </section>
   );
 };
 

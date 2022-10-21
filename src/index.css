@@ -160,15 +160,29 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px;
+  padding-top: 25px;
 }
 
 header h3 {
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .bars {
   visibility: hidden;
+}
+
+.header-btn {
+  color: white;
+  cursor: pointer;
+  background-color: #2680c0;
+  padding: 10px;
+}
+
+.header-btn:hover {
+  color: #2680c0;
+  background-color: transparent;
+  border: 1px solid var(--clr-primary);
 }
 
 /* filter buttons */
@@ -349,6 +363,11 @@ header h3 {
 
 /* media queries */
 @media screen and (max-width: 300px) {
+  .header-btn {
+    padding: 5px;
+    font-size: 0.7rem;
+  }
+
   .navbar {
     width: 95%;
     padding: 8px;
@@ -432,6 +451,9 @@ header h3 {
 }
 
 @media screen and (min-width: 1000px) {
+  .home {
+    padding-left: 80px;
+  }
   .navbar-container {
     position: fixed;
     left: 0;
